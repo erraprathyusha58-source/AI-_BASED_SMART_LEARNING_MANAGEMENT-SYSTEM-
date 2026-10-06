@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head><title>Dashboard</title></head>
+<body style="font-family: Arial; padding:20px;">
+<h1>Student Dashboard</h1>
+<h3>Recommended Courses (AI):</h3>
+<ul>
+{% for c in suggested %}
+<li>{{ c }}</li>
+{% endfor %}
+</ul>
+<h3>All Courses:</h3>
+<ul>
+{% for c in courses %}
+<li>{{ c }}</li>
+{% endfor %}
+</ul>
+<hr>
+<h3>Ask AI Tutor</h3>
+<form action="/ask_ai" method="POST">
+<input type="text" name="question" placeholder="what is python?" style="padding:10px; width:300px;">
+<button type="submit" style="padding:10px 20px;">Ask</button>
+</form>
+<br><a href="/">Back to Home</a>
+</body>
+</html>
